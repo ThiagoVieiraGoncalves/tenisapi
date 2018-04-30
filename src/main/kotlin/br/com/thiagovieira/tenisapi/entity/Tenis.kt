@@ -7,7 +7,8 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class Tenis(@Id var id: String?,
                  var marca: String,
                  var modelo: String,
-                 var tamanho: Int
+                 var tamanho: Int,
+                 var urlImagem: String?
                  ) {
 //    constructor(): this("", "", "", 0, "")
 
