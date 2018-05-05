@@ -21,4 +21,14 @@ class TenisController {
     fun salvar(@RequestBody tenis: Tenis) {
         tenisService.salvar(tenis)
     }
+
+    @GetMapping("/{id}")
+    fun buscaPeloId(@PathVariable("id") id: String) {
+        tenisService.buscarTenisPorId(id)
+    }
+
+    @DeleteMapping("/{id}")
+    fun remover(@PathVariable("id") id: String) {
+        tenisService.remover(id)
+    }
 }

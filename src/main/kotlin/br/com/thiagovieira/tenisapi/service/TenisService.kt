@@ -15,6 +15,10 @@ class TenisService {
         return tenisRepository.findAll()
     }
 
+    fun buscarTenisPorId(id: String): Tenis {
+        return tenisRepository.findById(id).get()
+    }
+
     fun buscarTenisPorMarca(marca: String): List<Tenis> {
         return tenisRepository.findByMarcaContaining(marca)
     }
@@ -31,4 +35,8 @@ class TenisService {
         tenisRepository.save(tenis)
     }
 
+    fun remover(id: String) {
+        val tenis = tenisRepository.findById(id).get()
+        tenisRepository.delete(tenis)
+    }
 }
