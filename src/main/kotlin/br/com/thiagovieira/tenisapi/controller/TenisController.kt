@@ -23,8 +23,8 @@ class TenisController {
     }
 
     @GetMapping("/{id}")
-    fun buscaPeloId(@PathVariable("id") id: String) {
-        tenisService.buscarTenisPorId(id)
+    fun buscaPeloId(@PathVariable("id") id: String): Tenis {
+        return tenisService.buscarTenisPorId(id)
     }
 
     @DeleteMapping("/{id}")
